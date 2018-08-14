@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="function.js"></script>
+  <style>
+    .btn {
+      background: #fff;
+      color: cornflowerblue;
+    }
+
+    .btn.active {
+      background: cornflowerblue;
+      color: #fff;
+    }
+
+    .card {
+      display: none;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+    }
+
+    .card.cur {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn active">按钮1</button>
+  <button class="btn">按钮2</button>
+  <button class="btn">按钮3</button>
+  <div class="card cur">1</div>
+  <div class="card">2</div>
+  <div class="card">3</div>
+</body>
+<script>
+  card(".btn", ".card", "active");
+</script>
+</html>
